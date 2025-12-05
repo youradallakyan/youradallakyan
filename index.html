@@ -16,6 +16,7 @@
             font-family: 'Roboto Slab', serif;
             background-color: #000000;
             color: white;
+            overflow-x: hidden; /* éviter scroll horizontal */
         }
 
         /* Titre */
@@ -46,33 +47,39 @@
             text-align: left;
         }
 
-        /* Image + signature */
+        /* Conteneur image */
         .image-container {
             position: relative;
             display: flex;
             justify-content: center;
         }
 
-        /* Image grande */
+        /* Image 3x plus grande */
         .image-container img {
-            max-width: 90vw; /* prend jusqu'à 90% de la largeur de l'écran */
-            max-height: 80vh; /* prend jusqu'à 80% de la hauteur de l'écran */
-            width: auto;
+            max-width: 1500px; /* environ 3x la taille précédente */
+            width: 100%;
             height: auto;
             border-radius: 10px;
+            display: block;
         }
 
-        /* Signature */
+        /* Signature en bas à droite de l'écran (pas collée) */
         .signature {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+            position: fixed; /* fixe à l'écran */
+            bottom: 50px;    /* un peu au-dessus du bas */
+            right: 50px;     /* un peu à l'intérieur du bord */
             font-size: 24px;
             font-family: 'Roboto Slab', serif;
             color: #e0e0e0;
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .image-container img {
+                max-width: 90vw; /* s’adapte aux écrans plus petits */
+            }
+        }
+
         @media (max-width: 900px) {
             main {
                 flex-direction: column;
@@ -98,9 +105,11 @@
 
         <div class="image-container">
             <img src="https://i.postimg.cc/xXw5ZzQb/Screenshot-20250526-230704-Snapchat.jpg" alt="Image de Youra">
-            <div class="signature">Excusez le han</div>
         </div>
     </main>
+
+    <!-- Signature fixe -->
+    <div class="signature">Excusez le han</div>
 
 </body>
 </html>
