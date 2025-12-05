@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,40 +6,38 @@
     <title>Youra Dallakyan</title>
 
     <!-- Polices spéciales -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"> <!-- Titre -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> <!-- Description et signature -->
 
     <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: 'Roboto Slab', serif;
-            background-color: #000000;
+            background-color: #000000; /* fond noir */
             color: white;
-            overflow-x: hidden; /* éviter scroll horizontal */
+            overflow-x: hidden;
         }
 
-        /* Titre */
+        /* Titre en haut à gauche */
         header {
             font-family: 'Orbitron', sans-serif;
-            font-size: 40px;
+            font-size: 40px; 
             font-weight: 700;
-            text-align: left;
-            margin-left: 30px;
-            margin-top: 20px;
+            margin: 20px 0 0 30px; /* top 20px, left 30px */
         }
 
-        /* Section principale */
-        main {
+        /* Conteneur principal */
+        .container {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: flex-start; /* description à gauche */
+            align-items: center;
             gap: 50px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+            padding: 20px;
+            height: calc(100vh - 100px); /* pour centrer verticalement */
         }
 
-        /* Description */
+        /* Description collée à gauche */
         .description {
             max-width: 400px;
             font-size: 28px;
@@ -49,39 +47,40 @@
 
         /* Conteneur image */
         .image-container {
-            position: relative;
+            flex: 1;
             display: flex;
             justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
-        /* Image 3x plus grande */
+        /* Image énorme */
         .image-container img {
-            max-width: 1500px; /* environ 3x la taille précédente */
+            max-width: 1500px; /* 3x plus grande */
             width: 100%;
             height: auto;
             border-radius: 10px;
-            display: block;
         }
 
-        /* Signature en bas à droite de l'écran (pas collée) */
+        /* Signature en bas à droite de l'écran */
         .signature {
-            position: fixed; /* fixe à l'écran */
-            bottom: 50px;    /* un peu au-dessus du bas */
-            right: 50px;     /* un peu à l'intérieur du bord */
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
             font-size: 24px;
             font-family: 'Roboto Slab', serif;
             color: #e0e0e0;
         }
 
-        /* Responsive */
+        /* Responsive pour écrans plus petits */
         @media (max-width: 1200px) {
             .image-container img {
-                max-width: 90vw; /* s’adapte aux écrans plus petits */
+                max-width: 90vw;
             }
         }
 
         @media (max-width: 900px) {
-            main {
+            .container {
                 flex-direction: column;
                 gap: 30px;
                 align-items: center;
@@ -97,18 +96,20 @@
     <!-- Titre -->
     <header>Youra Dallakyan</header>
 
-    <!-- Section principale -->
-    <main>
+    <!-- Conteneur principal -->
+    <div class="container">
+        <!-- Description collée à gauche -->
         <div class="description">
-           Attention, cette personne est tres gay, elle cherche mais demande pardon apres, si vous la voyez, fuiyez
+            Attention, cette personne est très gay, elle cherche mais demande pardon après, si vous la voyez, fuyez.
         </div>
 
+        <!-- Image -->
         <div class="image-container">
             <img src="https://i.postimg.cc/xXw5ZzQb/Screenshot-20250526-230704-Snapchat.jpg" alt="Image de Youra">
         </div>
-    </main>
+    </div>
 
-    <!-- Signature fixe -->
+    <!-- Signature en bas à droite -->
     <div class="signature">Excusez le han</div>
 
 </body>
