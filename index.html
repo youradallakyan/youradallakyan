@@ -6,81 +6,78 @@
     <title>Youra Dallakyan</title>
 
     <!-- Polices spéciales -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"> <!-- Titre -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> <!-- Description et signature -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             padding: 20px;
             font-family: 'Roboto Slab', serif;
-            background-color: #000000; /* fond noir */
+            background-color: #000000;
             color: white;
-            height: 100vh;
         }
 
-        /* Titre en haut à gauche */
+        /* Titre */
         header {
             font-family: 'Orbitron', sans-serif;
-            font-size: 40px; /* taille moyenne */
+            font-size: 40px;
             font-weight: 700;
             text-align: left;
-            margin-left: 30px; /* éloigné du bord gauche */
-            margin-top: 20px;  /* peu rapproché du haut */
+            margin-left: 30px;
+            margin-top: 20px;
         }
 
-        /* Section principale : description + image */
+        /* Section principale */
         main {
             display: flex;
-            justify-content: center; /* centre l’ensemble */
-            align-items: center;
-            gap: 60px; /* espace entre description et image */
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
             margin-top: 30px;
             flex-wrap: wrap;
-            height: calc(100vh - 120px); /* permet de centrer verticalement */
         }
 
-        /* Description à gauche */
+        /* Description */
         .description {
             max-width: 400px;
-            font-size: 28px; /* grande taille */
+            font-size: 28px;
             line-height: 1.5;
             text-align: left;
         }
 
-        /* Conteneur image + signature */
+        /* Image + signature */
         .image-container {
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
-        /* Image grande et centrée */
+        /* Image grande */
         .image-container img {
-            max-width: 600px; /* image plus grande */
-            width: 100%;
+            max-width: 90vw; /* prend jusqu'à 90% de la largeur de l'écran */
+            max-height: 80vh; /* prend jusqu'à 80% de la hauteur de l'écran */
+            width: auto;
             height: auto;
             border-radius: 10px;
-            display: block;
         }
 
-        /* Signature en bas à droite de l'image */
+        /* Signature */
         .signature {
             position: absolute;
             bottom: 10px;
             right: 10px;
-            font-size: 24px; /* un peu plus petit que description */
+            font-size: 24px;
             font-family: 'Roboto Slab', serif;
             color: #e0e0e0;
         }
 
-        /* Responsive pour écrans plus petits */
+        /* Responsive */
         @media (max-width: 900px) {
             main {
                 flex-direction: column;
                 gap: 30px;
-                height: auto;
+                align-items: center;
             }
             .description {
                 text-align: center;
@@ -95,12 +92,10 @@
 
     <!-- Section principale -->
     <main>
-        <!-- Description à gauche -->
         <div class="description">
            Attention, cette personne est tres gay, elle cherche mais demande pardon apres, si vous la voyez, fuiyez
         </div>
 
-        <!-- Image et signature -->
         <div class="image-container">
             <img src="https://i.postimg.cc/xXw5ZzQb/Screenshot-20250526-230704-Snapchat.jpg" alt="Image de Youra">
             <div class="signature">Excusez le han</div>
