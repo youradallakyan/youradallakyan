@@ -16,49 +16,54 @@
             font-family: 'Roboto Slab', serif;
             background-color: #000000;
             color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
-        /* Titre en haut à gauche */
+        /* Titre (nom et prénom) */
         header {
             font-family: 'Orbitron', sans-serif;
-            font-size: 36px;  /* taille moyenne */
+            font-size: 48px; /* taille moyenne */
             font-weight: 700;
-            text-align: left;
+            text-align: right; /* collé au bord droit */
+            margin-bottom: 20px;
+            margin-right: 20px;
         }
 
-        /* Section centrale pour image + description */
+        /* Section principale : description + image */
         main {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex: 1;
-            gap: 40px; /* espace entre image et description */
+            align-items: flex-start;
+            gap: 40px;
         }
 
-        /* Description à gauche de l'image */
+        /* Description à gauche */
         .description {
-            max-width: 300px;
-            font-size: 20px; /* taille moyenne */
-            line-height: 1.4;
-            text-align: left;
+            max-width: 350px;
+            font-size: 22px; /* un peu plus grande */
+            line-height: 1.5;
         }
 
-        /* Image centrée */
+        /* Conteneur image et signature */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Image */
         .image-container img {
-            max-width: 400px;
+            max-width: 500px; /* taille moyenne pour détails visibles */
             width: 100%;
             border-radius: 10px;
         }
 
-        /* Signature en bas à droite */
-        footer {
-            font-size: 20px; /* taille moyenne */
-            text-align: right;
+        /* Signature en bas à droite de l'image */
+        .signature {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 20px;
             font-family: 'Roboto Slab', serif;
+            color: #e0e0e0;
         }
     </style>
 </head>
@@ -67,18 +72,16 @@
     <!-- Titre -->
     <header>Youra Dallakyan</header>
 
-    <!-- Image et description -->
+    <!-- Section principale -->
     <main>
         <div class="description">
-            Attention, cette personne est tres gay, elle cherche mais demande pardon apres, si vous la voyez, fuiyez
+           Attention, cette personne est tres gay, elle cherche mais demande pardon apres, si vous la voyez, fuiyez !!!
         </div>
         <div class="image-container">
-            <img src="https://i.postimg.cc/xNRPZxR6/Snapchat-1814180939.jpg" alt="Image de Youra">
+            <img src="https://i.postimg.cc/RWrr9qQR/Snapchat-2005614137.jpg" alt="Image de Youra">
+            <div class="signature">Excusez le hannnn</div>
         </div>
     </main>
-
-    <!-- Signature -->
-    <footer>Excusez le hannnnn</footer>
 
 </body>
 </html>
