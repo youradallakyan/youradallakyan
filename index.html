@@ -6,20 +6,19 @@
     <title>Youra Dallakyan</title>
 
     <!-- Polices spéciales -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"> <!-- Titre -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> <!-- Description et signature -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Roboto Slab', serif;
-            background-color: #000000; /* fond noir */
+            background-color: #000000;
             color: white;
             overflow-x: hidden;
         }
 
-        /* Titre en haut à gauche */
         header {
             font-family: 'Orbitron', sans-serif;
             font-size: 40px; 
@@ -27,52 +26,52 @@
             margin: 20px 0 0 30px;
         }
 
-        /* Conteneur principal */
         .container {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
             padding: 20px;
             height: calc(100vh - 100px);
         }
 
-        /* Description / Coordonnées à gauche */
+        /* Coordonnées avec couleurs */
         .description {
-            max-width: 400px;
+            max-width: 420px;
             font-size: 28px;
             line-height: 1.5;
             text-align: left;
         }
 
-        /* Conteneur image */
-        .image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+        .description span {
+            font-weight: bold;
+            background: linear-gradient(90deg, #00d0ff, #a400ff, #ff008c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Image taille adaptée */
-        .image-container img {
-            max-width: 300px;
+        /* Conteneur images */
+        .images {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+
+        .images img {
+            max-width: 260px;
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
-        /* Signature en bas à droite */
         .signature {
             position: fixed;
             bottom: 50px;
             right: 50px;
             font-size: 24px;
-            font-family: 'Roboto Slab', serif;
             color: #e0e0e0;
         }
 
-        /* Responsive pour écrans plus petits */
         @media (max-width: 900px) {
             .container {
                 flex-direction: column;
@@ -82,33 +81,40 @@
             .description {
                 text-align: center;
             }
+            .images {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Titre -->
     <header>Youra Dallakyan</header>
 
-    <!-- Contenu principal -->
     <div class="container">
 
         <!-- Coordonnées -->
         <div class="description">
             Voici mes coordonnées : <br><br>
-            <strong>TikTok :</strong> y.dlkn59 <br>
-            <strong>Instagram :</strong> yura_dlkn <br>
-            <strong>Snapchat :</strong> yura.arm
+
+            <span>TikTok :</span> y.dlkn59 <br>
+            <span>Instagram :</span> yura_dlkn <br>
+            <span>Snapchat :</span> yura.arm
         </div>
 
-        <!-- Image -->
-        <div class="image-container">
-            <img src="https://i.postimg.cc/F1vc7QNZ/Screenshot-20241129-155645-Tik-Tok.jpg" alt="Image de Youra">
+        <!-- Deux images côte à côte -->
+        <div class="images">
+
+            <!-- IMAGE 1 (celle que tu avais déjà) -->
+            <img src="https://i.postimg.cc/F1vc7QNZ/Screenshot-20241129-155645-Tik-Tok.jpg">
+
+            <!-- IMAGE 2 (remplace le lien ici) -->
+            <img src="https://th.bing.com/th/id/OIP.AiTEMTpFgkaeskFE7kLApQHaHz?w=172&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1">
+
         </div>
 
     </div>
 
-    <!-- Signature -->
     <div class="signature">Excusez le</div>
 
 </body>
