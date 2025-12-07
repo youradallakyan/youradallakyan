@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO amélioré -->
     <title>Youra Dallakyan</title>
     <meta name="description" content="Page officielle de Youra Dallakyan. Suivez-moi sur TikTok, Instagram et Snapchat.">
 
@@ -12,27 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
     <style>
+        /* Fond animé (particules) */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Roboto Slab', serif;
-            overflow-x: hidden;
+            overflow: hidden;
+            background: black;
             color: white;
         }
 
-        /* --- FOND GALAXIE ANIMÉ --- */
-        body::before {
-            content: "";
+        #particles-js {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            background: url("https://i.postimg.cc/HxjFDPLj/galaxy.gif");
-            background-size: cover;
-            background-position: center;
             z-index: -1;
-            opacity: 0.25;
+            top: 0;
+            left: 0;
         }
 
         header {
@@ -41,113 +36,112 @@
             text-align: center;
             margin-top: 20px;
             color: white;
-            text-shadow: 0 0 15px #a200ff;
-            animation: glow 2s infinite alternate ease-in-out;
+            text-shadow: 0 0 20px #9d00ff;
+            animation: glowTitle 2s infinite alternate;
         }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 15px #8800ff; }
-            to   { text-shadow: 0 0 35px #ff00ff; }
+        @keyframes glowTitle {
+            from { text-shadow: 0 0 20px #7a00ff; }
+            to { text-shadow: 0 0 40px #ff00ff; }
         }
 
-        /* Conteneur */
         .container {
-            margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 70px;
-            padding: 20px;
+            margin-top: 60px;
             flex-wrap: wrap;
         }
 
         /* Images */
         .images img {
-            width: 300px;
+            width: 260px;
             border-radius: 15px;
-            border: 3px solid #b200ff;
-            box-shadow: 0 0 20px #b200ff;
+            border: 3px solid #c100ff;
+            box-shadow: 0 0 20px #c100ff;
         }
 
-        /* --- BOUTONS MODERNES --- */
+        /* Boutons modernes */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
         .btn {
             display: flex;
             align-items: center;
-            gap: 12px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid #ffffff50;
-            padding: 12px 22px;
+            gap: 14px;
+            padding: 14px 25px;
             border-radius: 50px;
-            font-size: 20px;
+            font-size: 22px;
+            font-family: 'Roboto Slab', serif;
             color: white;
             text-decoration: none;
-            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             transition: 0.25s ease;
+            box-shadow: 0 0 12px transparent;
         }
 
         .btn:hover {
             transform: scale(1.08);
-            box-shadow: 0 0 15px white;
+            box-shadow: 0 0 25px white;
         }
 
         .btn:active {
             transform: scale(0.95);
         }
 
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        /* Icônes */
+        /* Icônes OFFICIELLES */
         .icon {
             width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
 
         .signature {
-            text-align: center;
-            font-size: 22px;
             margin-top: 40px;
+            text-align: center;
+            font-size: 20px;
             opacity: 0.8;
         }
     </style>
 
-    <!-- vibration bouton -->
+    <!-- Script vibration + ouverture app -->
     <script>
         function vibrate() {
             if (navigator.vibrate) navigator.vibrate(80);
         }
 
-        // Fonction ouverture directe + fallback web
         function openApp(appUrl, webUrl) {
             vibrate();
-
             let start = Date.now();
-
-            // tente d'ouvrir l'app
             window.location = appUrl;
-
-            // si l'app n'est pas installée -> ouvre le site web
             setTimeout(() => {
                 if (Date.now() - start < 1200) {
                     window.location = webUrl;
                 }
-            }, 800);
+            }, 700);
         }
     </script>
-</head>
 
+</head>
 <body>
+
+    <!-- Fond animé -->
+    <div id="particles-js"></div>
 
     <header>Youra Dallakyan</header>
 
     <div class="container">
 
+        <!-- BOUTONS -->
         <div class="buttons">
 
             <!-- TikTok -->
-            <a class="btn" href="#" 
+            <a class="btn" href="#"
                onclick="openApp('tiktok://user/@y.dlkn59', 'https://www.tiktok.com/@y.dlkn59')">
                 <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">
                 TikTok
@@ -160,10 +154,10 @@
                 Instagram
             </a>
 
-            <!-- Snapchat -->
+            <!-- Snapchat (LOGO OFFICIEL FIXÉ) -->
             <a class="btn" href="#"
                onclick="openApp('snapchat://add/yura.arm', 'https://www.snapchat.com/add/yura.arm')">
-                <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/a/ad/Snapchat_logo.svg">
+                <img class="icon" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/512px-Snapchat_logo.svg.png">
                 Snapchat
             </a>
 
@@ -172,12 +166,17 @@
         <!-- IMAGES -->
         <div class="images">
             <img src="https://i.postimg.cc/F1vc7QNZ/Screenshot-20241129-155645-Tik-Tok.jpg">
-            <img src="https://th.bing.com/th/id/OIP.AiTEMTpFgkaeskFE7kLApQHaHz">
+            <img src="https://th.bing.com/th/id/OIP.AiTEMTpFgkaeskFE7kLApQHaHz" />
         </div>
-
     </div>
 
     <div class="signature">Excusez le</div>
+
+    <!-- Script fond animé (particules) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json');
+    </script>
 
 </body>
 </html>
