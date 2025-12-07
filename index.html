@@ -5,163 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Youra Dallakyan</title>
 
+<!-- Polices -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
 <style>
-/* ----------- GLOBAL ----------- */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Slab', serif;
+    color: white;
     background: #000;
-    color: white;
-    text-align: center;
-    font-family: "Roboto Slab", serif;
+    overflow-x: hidden;
 }
 
-/* ----------- TITRE ----------- */
-h1 {
-    margin-top: 60px;
-    font-size: 55px;
-    font-family: "Orbitron", sans-serif;
-    color: #00eaff;
-    text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
-}
-
-/* ----------- ICONES RÉSEAUX ----------- */
-.socialIcon {
-    display: inline-block;
-    width: 95px;
-    height: 95px;
-    margin: 18px;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: 0.35s;
-    position: relative;
-}
-
-/* Halo animé multicolore */
-.socialIcon::before {
-    content: "";
-    position: absolute;
-    inset: -8px;
-    border-radius: 50%;
-    filter: blur(18px);
-    animation: neonHalo 3s linear infinite;
-}
-
-@keyframes neonHalo {
-    0% { box-shadow: 0 0 20px #ff004c; }
-    25% { box-shadow: 0 0 20px #ffae00; }
-    50% { box-shadow: 0 0 20px #00eaff; }
-    75% { box-shadow: 0 0 20px #ae00ff; }
-    100% { box-shadow: 0 0 20px #ff004c; }
-}
-
-.socialIcon:hover {
-    transform: rotate(15deg) scale(1.15);
-    filter: brightness(1.3);
-}
-
-/* Logo */
-.socialIcon img {
-    width: 100%;
-    height: 100%;
-}
-
-/* ----------- ÉPINGLÉ 3D ----------- */
-.pin-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    font-size: 32px;
-    font-family: "Orbitron", sans-serif;
-    color: white;
-    gap: 15px;
-    position: relative;
-}
-
-/* Halo multicolore autour de l'épingle */
-.pin-block::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+/* Fond galaxie */
+canvas#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
-    animation: pinHalo 4s infinite linear;
-}
-
-@keyframes pinHalo {
-    0% { box-shadow: 0 0 20px #ff0000; }
-    25% { box-shadow: 0 0 25px #ff8c00; }
-    50% { box-shadow: 0 0 25px #00eaff; }
-    75% { box-shadow: 0 0 25px #ae00ff; }
-    100% { box-shadow: 0 0 20px #ff0000; }
-}
-
-/* L'icône 3D */
-.pin-icon {
-    width: 70px;
-    filter: drop-shadow(0 0 10px #ff0000);
-}
-
-/* ----------- TEXTE LOCALISATION ----------- */
-.pin-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.pin-dept {
-    font-size: 34px;
-    color: #00eaff;
-    text-shadow: 0 0 12px #00eaff;
-}
-
-.pin-country {
-    margin-top: -6px;
-    font-size: 22px;
-    color: #ffae00;
-    text-shadow: 0 0 10px #ffae00;
-}
-</style>
-</head>
-
-<body>
-
-<h1>Youra Dallakyan</h1>
-
-<!-- ---------------- ICONES RESEAUX ---------------- -->
-<div class="socials">
-
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@ydlkn59" target="_blank" class="socialIcon">
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">
-    </a>
-
-    <!-- Instagram -->
-    <a href="https://instagram.com/yura_dlkn" target="_blank" class="socialIcon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-    </a>
-
-    <!-- Snapchat -->
-    <a href="https://www.snapchat.com/add/yura.arm" target="_blank" class="socialIcon">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Snapchat_logo.svg">
-    </a>
-
-</div>
-
-<!-- ---------------- ÉPINGLÉ 3D ---------------- -->
-<div class="pin-block">
-    <img class="pin-icon" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Pin_%E2%80%93_Default_%E2%80%93_Default.png">
-
-    <div class="pin-text">
-        <div class="pin-dept">59</div>
-        <div class="pin-country">Arménie 🇦🇲</div>
-    </div>
-</div>
-
-</body>
-</html>
+    width: 100
