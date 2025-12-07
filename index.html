@@ -25,4 +25,224 @@ canvas#bgCanvas {
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100
+    width: 100%;
+    height: 100%;
+}
+
+/* Titre */
+header {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 20px 0 0 30px;
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffff,0 0 20px #00ffff,0 0 40px #00ffff; }
+    to { text-shadow: 0 0 20px #ff00ff,0 0 40px #ff00ff,0 0 80px #ff00ff; }
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 20px;
+    height: calc(100vh - 100px);
+}
+
+/* Section icônes */
+.description {
+    max-width: 400px;
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+/* Icônes modernes */
+.socialIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    margin: 15px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo */
+.socialIcon img {
+    width: 45px;
+    height: 45px;
+    z-index: 3;
+}
+
+/* Effet néon animé */
+.socialIcon::before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    top: -20%;
+    left: -20%;
+    border-radius: 30%;
+    z-index: 1;
+    filter: blur(25px);
+    opacity: 0.8;
+    animation: haloMove 4s infinite linear;
+}
+
+@keyframes haloMove {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* TikTok halo dégradé animé */
+.tiktok::before {
+    background: conic-gradient(
+        #00f0ff,
+        #ff004f,
+        #00f0ff
+    );
+}
+
+/* Instagram dégradé rose-orange-violet */
+.instagram::before {
+    background: conic-gradient(
+        #ff006a,
+        #ff8b2f,
+        #ff4f91,
+        #ff006a
+    );
+}
+
+/* Snapchat jaune brillant */
+.snapchat::before {
+    background: conic-gradient(
+        #fff700,
+        #ffd900,
+        #fff36e,
+        #fff700
+    );
+}
+
+/* Effets hover : rotation + zoom + néon fort */
+.socialIcon:hover {
+    transform: scale(1.25) rotate(10deg);
+    box-shadow: 0 0 25px #fff, 0 0 50px #fff;
+}
+
+/* Petite vibration subtile */
+.socialIcon:hover img {
+    animation: vibro 0.15s infinite linear;
+}
+
+@keyframes vibro {
+    0% { transform: translate(0px, 0px) }
+    25% { transform: translate(1px, -1px) }
+    50% { transform: translate(-1px, 1px) }
+    75% { transform: translate(1px, 1px) }
+    100% { transform: translate(0px, 0px) }
+}
+
+/* Image principale */
+.images img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #7f00ff;
+    box-shadow: 0 0 20px #7f00ff;
+}
+
+/* Signature */
+.signature {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .description { text-align: center; }
+    .images { margin-top: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>Youra Dallakyan</header>
+
+<div class="container">
+
+    <div class="description">
+        Voici mes coordonnées : <br><br>
+
+        <a href="https://www.tiktok.com/@ydlkn59" target="_blank" class="socialIcon tiktok" title="TikTok : ydlkn59">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">
+        </a>
+
+        <a href="https://instagram.com/yura_dlkn" target="_blank" class="socialIcon instagram" title="Instagram : yura_dlkn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+        </a>
+
+        <a href="https://www.snapchat.com/add/yura.arm" target="_blank" class="socialIcon snapchat" title="Snapchat : yura.arm">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Snapchat_logo.svg">
+        </a>
+
+    </div>
+
+    <div class="images">
+        <img src="data:image/webp;base64,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" alt="Image principale">
+    </div>
+</div>
+
+<div class="signature">Excusez-le</div>
+
+<!-- Canvas galaxie -->
+<canvas id="bgCanvas"></canvas>
+<script>
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const particles = [];
+for(let i=0;i<120;i++){
+    particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,radius:Math.random()*2+1,dx:(Math.random()-0.5)*0.4,dy:(Math.random()-0.5)*0.4});
+}
+function animate(){
+    ctx.fillStyle="#000";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    for(let p of particles){
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.fillStyle="white";
+        ctx.fill();
+        p.x+=p.dx; p.y+=p.dy;
+        if(p.x<0||p.x>canvas.width)p.dx*=-1;
+        if(p.y<0||p.y>canvas.height)p.dy*=-1;
+    }
+    requestAnimationFrame(animate);
+}
+animate();
+window.addEventListener('resize',()=>{canvas.width=window.innerWidth; canvas.height=window.innerHeight;});
+</script>
+
+</body>
+</html>
